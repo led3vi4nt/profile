@@ -1,0 +1,16 @@
+<p class="pt-3 pb-2">He has years of experience with</p>
+<div class="flex-container" id="pComponent">
+  <div *ngFor="let profession of professions; let i = index" [ngClass]="{'break':profession=='break'}">
+    <badge *ngIf="profession!='break'" [badgeId]="profession"></badge>
+  </div>
+  <div class="break"></div>
+  <div class="show-pointer-container">
+    <badge [badgeId]="'photoshop'" (clickEvent)="popGallery()" [class]="'pointer'"></badge>
+    <div class="show-pointer" id="pointer-container" *ngIf="galleryUnseen">
+      <img src="../../../assets/images/pointer.png" class="show-pointer-img" />
+    </div>
+  </div>
+  <div>
+    <badge [badgeId]="'illustrator'"></badge>
+  </div>
+</div>

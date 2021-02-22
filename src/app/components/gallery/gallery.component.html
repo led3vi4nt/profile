@@ -1,0 +1,12 @@
+<div class="gallery-container">
+  <span class="mat-dialog-x" mat-dialog-close>[ Close ]</span>
+  <div class="gallery-wrapper">
+    <div class="image-container">
+      <figure *ngFor="let imageId of imageOrder; let i = index" [style]="imgCss[i]" (click)="popImageViewer(imageId)">
+        <img [src]="'../../../assets/images/photoshop/image_'+imageId+'.jpg'" [alt]="imgTitles[imageId]"
+          [title]="imgTitles[imageId]" class="gallery_img">
+        <span class="image-title">{{imgTitles[imageId]}}</span>
+      </figure>
+    </div>
+  </div>
+</div>

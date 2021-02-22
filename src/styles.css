@@ -1,0 +1,364 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:root {
+  --bg-color: #eee;
+  --font-color: #ddd;
+  --index-font-color: #888;
+  --content-bg-color: #292929;
+  --content-bg-a-color: rgb(41, 41, 41, .8);
+  --trns-font-color: rgba(136, 136, 136, .6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  background: var(--bg-color);
+  color: var(--font-color);
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: -1px;
+  height: 100%;
+}
+
+#content {
+  display: block;
+  background: var(--content-bg-color);
+  width: 540px;
+  min-height: 100%;
+  max-width: 540px;
+  margin-left: 420px;
+  padding: 35px 15px 0;
+}
+
+.profile-image-container {
+  position: absolute;
+  top: 20px;
+  left: 300px;
+  width: 300px;
+  height: 300px;
+  background-color: var(--bg-color);
+  border-radius: 100%;
+  border-width: 15px;
+  border-color: var(--content-bg-color) !important;
+  border-style: solid;
+  z-index: 50 !important;
+  overflow: hidden;
+}
+
+.profile-image-container div {
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/images/profile-pic-small.jpg");
+  background-size: cover;
+  filter: grayscale(1) brightness(.75) contrast(1.2);
+  transition: filter 250ms;
+}
+
+.profile-image-container div:hover {
+  filter: grayscale(0);
+}
+
+.this-is-him {
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  left: 460px;
+  width: 150px;
+  height: 150px;
+  background-color: transparent !important;
+  background-image: url("assets/images/this-is-him.png");
+  background-position: top left;
+  background-size: cover;
+  z-index: 55;
+}
+
+.kind-of {
+  left: 100px;
+}
+
+top-details {
+  float: right;
+  display: block;
+  padding-right: 30px;
+  padding-bottom: 50px;
+}
+
+mid-experiences {
+  display: block;
+  clear: both;
+  padding-bottom: 20px;
+}
+
+bottom-contact {
+  display: block;
+  clear: both;
+}
+
+h1,h2,p {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.4em;
+  padding-left: 16px;
+  padding-bottom: 8px;
+}
+
+a:hover,
+a:visited,
+a:active,
+a {
+  color: unset;
+}
+
+
+a:hover {
+  text-shadow: 0 0 5px #fff;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding: 1.5px 0;
+  padding-left: 16px;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  letter-spacing: 1px;;
+}
+
+p {
+  color: var(--index-font-color);
+}
+
+
+h2>span {
+  display: block;
+  position: relative;
+  top: -5px;
+  font-size: .75em;
+  margin-bottom: -20px;
+  color: var(--trns-font-color);
+  padding-left: 16px;
+  text-transform: lowercase;
+  font-family: 'Roboto';
+  letter-spacing: -1px;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  margin: 0 auto;
+}
+
+.flex-container > div {
+  width: 70px;
+  text-align: center;
+  margin: 6px 8px;
+}
+
+.badge-title {
+  position: absolute;
+  top: 95%;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  font-size: .6em;
+  opacity: .8;
+  width: 100%;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.flex-container>div img {
+  width: 95%;
+  /*filter: brightness(.75);*/
+}
+
+.flex-container>div a img:hover {
+  filter: brightness(1);
+}
+
+.highlightable {
+  filter: brightness(.75);
+  background-color: transparent !important;
+}
+
+.highlightable:hover {
+  filter: brightness(1);
+}
+
+.flex-container>div img.highlight {
+  filter: brightness(1);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+@keyframes pointerflash {
+
+  0%,
+  20% {
+    transform: scale(1.2);
+  }
+
+  25% {
+    transform: scale(1);
+  }
+
+  40%,
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.mat-dialog-container {
+  background: transparent;
+  width: 100vw !important;
+  padding: 0 !important;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.galleryDialog,
+.gallery-container {
+  max-width: unset !important;
+  background-color: var(--content-bg-a-color);
+}
+
+.gallery-wrapper {
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+.image-container {
+  display: grid;
+  width: 4500px;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 15px;
+}
+
+figure {
+  margin: 0 !important;
+  position: relative;
+}
+
+.gallery_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 2px 5px 5px rgba(0,0,0,.4);
+}
+
+figure:hover .image-title {
+  display: block;
+}
+
+.image-title {
+  display: none;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  background: rgba(0,0,0,.4);
+  text-align: center;
+  color: var(--font-color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mat-dialog-x {
+  color: var(--font-color);
+  background-color: rgba(0,0,0,.4);
+  display: inline-block;
+  margin: .5em 0 0;
+  padding: 3px 10px;
+  position: fixed;
+  right: 1em;
+  text-align: center;
+  z-index: 100;
+}
+
+.image-viewer-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.image-viewer-title {
+  display: block;
+  margin: 0;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  background: var(--content-bg-a-color);
+  text-align: center;
+  color: var(--font-color);
+  text-transform: uppercase;
+}
+
+.image-viewer-inner-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 15px 15px 25px rgba(0,0,0,.4);
+}
+
+.image-viewer-container img {
+  max-height: 100vh;
+  width: auto;
+}
+
+.show-pointer-container {
+  position: relative;
+}
+
+.show-pointer-container:hover .show-pointer {
+  display: none;
+}
+
+.show-pointer-container .show-pointer {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  transform-origin: center;
+  animation: pointerflash 3s infinite;
+}
+
+.show-pointer-container .show-pointer img {
+  width: 24px;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
