@@ -121,6 +121,8 @@ a:visited,
 a:active,
 a {
   color: unset;
+  outline: none;
+  border: none;
 }
 
 
